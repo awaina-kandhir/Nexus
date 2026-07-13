@@ -27,7 +27,18 @@ const io = new Server(server, {
   },
 });
 
-app.use(cors());
+import cors from "cors";
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://nexus-flax-mu.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 import path from "path";
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
