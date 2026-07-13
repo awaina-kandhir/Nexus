@@ -8,7 +8,8 @@ import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import meetingRoutes from "./routes/meetingRoutes.js";
 import documentRoutes from "./routes/documentRoutes.js";
-
+import paymentRoutes from "./routes/paymentRoutes.js";
+import otpRoutes from "./routes/otpRoutes.js";
 dotenv.config();
 
 connectDB();
@@ -35,6 +36,8 @@ app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 app.use("/api/users", userRoutes);
 app.use("/api/meetings", meetingRoutes);
 app.use("/api/documents", documentRoutes);
+app.use("/api/payments", paymentRoutes);
+app.use("/api/otp", otpRoutes);
 
 app.get("/", (req, res) => {
   res.send("Nexus Backend is Running...");
