@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/meetings";
+const API = "https://nexus-production-121c.up.railway.app/api/meetings";
 
 // Get all meetings
 export const getMeetings = async () => {
