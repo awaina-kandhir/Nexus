@@ -22,20 +22,24 @@ const server = http.createServer(app);
 // Create Socket.IO Server
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+      "http://localhost:5173",
+      "https://nexus-flax-mu.vercel.app",
+    ],
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
-import cors from "cors";
+
 
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://nexus-flax-mu.vercel.app"
+      "https://nexus-flax-mu.vercel.app",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
