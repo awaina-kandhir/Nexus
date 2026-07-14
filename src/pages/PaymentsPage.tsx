@@ -119,8 +119,9 @@ const PaymentsPage: React.FC = () => {
           </CardHeader>
 
           <CardBody>
+           <span className="absolute left-3 top-2 text-gray-500">$</span>
             <input
-              className="border rounded w-full p-2 mb-3"
+    className="border rounded w-full p-2 pl-7"
               placeholder="Enter Deposit Amount"
               value={depositAmount}
               onChange={(e) =>
@@ -147,8 +148,9 @@ const PaymentsPage: React.FC = () => {
           </CardHeader>
 
           <CardBody>
-            <input
-              className="border rounded w-full p-2 mb-3"
+            <span className="absolute left-3 top-2 text-gray-500">$</span>
+              <input
+    className="border rounded w-full p-2 pl-7"
               placeholder="Enter Withdraw Amount"
               value={withdrawAmount}
               onChange={(e) =>
@@ -185,8 +187,9 @@ const PaymentsPage: React.FC = () => {
               }
             />
 
-            <input
-              className="border rounded w-full p-2 mb-3"
+            <span className="absolute left-3 top-2 text-gray-500">$</span>
+           <input
+                className="border rounded w-full p-2 pl-7"
               placeholder="Enter Transfer Amount"
               value={transferAmount}
               onChange={(e) =>
@@ -253,7 +256,7 @@ const PaymentsPage: React.FC = () => {
                     </td>
 
                     <td className="p-2">
-                      Rs. {t.amount}
+                      ${Number(t.amount).toFixed(2)}
                     </td>
 
                     <td className="p-2">
