@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://nexus-production-121c.up.railway.app/api/documents";
+const API = "http://localhost:5000/api/documents";
 
 export const getDocuments = async () => {
   const res = await axios.get(API);

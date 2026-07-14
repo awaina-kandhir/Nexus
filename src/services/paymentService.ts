@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://nexus-production-121c.up.railway.app/api/payments";
+const API = "http://localhost:5000/api/payments";
 
 // Deposit
 export const deposit = async (

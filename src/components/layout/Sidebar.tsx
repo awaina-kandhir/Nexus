@@ -11,6 +11,7 @@ import {
   FileText,
   Settings,
   HelpCircle,
+  Video,
   CalendarDays,
   Wallet,
 } from "lucide-react";
@@ -52,6 +53,7 @@ export const Sidebar: React.FC = () => {
     { to: "/meetings", icon: <CalendarDays size={20} />, text: "Meetings" },
     { to: "/calendar", icon: <CalendarDays size={20} />, text: "Calendar" },
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
+    { to: "/video", icon: <Video size={20} />, text: "Video Meeting" },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
     { to: '/payments', icon: <Wallet size={20} />, text: 'Payments' },
@@ -64,6 +66,7 @@ export const Sidebar: React.FC = () => {
     { to: "/meetings", icon: <CalendarDays size={20} />, text: "Meetings" },
     { to: "/calendar", icon: <CalendarDays size={20} />, text: "Calendar" },
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
+    { to: "/video", icon: <Video size={20} />, text: "Video Meeting" },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/deals', icon: <FileText size={20} />, text: 'Deals' },
     { to: '/payments', icon: <Wallet size={20} />, text: 'Payments' },
